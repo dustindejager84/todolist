@@ -1,6 +1,20 @@
 import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
+ import Button from '@mui/material/Button';
+ import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+
+ const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#1976d2',
+    },
+    secondary: {
+      main: '#dc004e',
+    },
+  },
+});
 
 function App() {
   const [count, setCount] = useState(() => {
@@ -17,26 +31,23 @@ function App() {
   }, [count]);
 
   return (
-    <>
-      <div>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>To Do List</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          +
-        </button>
+    <ThemeProvider theme={theme}>
+      <>
+        
+        <h1>To Do List</h1>
+        <div className="card">
+          <Button color="primary" variant="contained" onClick={() => setCount((count) => count + 1)} aria-label="Increment">
+              +
+          </Button>
 
-        <div>count is {count}</div>
+          <div>count is {count}</div>
 
-        <button onClick={() => setCount((count) => count - 1)}>
-          -
-        </button>
-      </div>
-
-    </>
+          <Button color="secondary" variant="contained" onClick={() => setCount((count) => count - 1)} aria-label="Decrement">
+              -
+          </Button>
+        </div>
+      </>
+    </ThemeProvider>
   )
 }
 
