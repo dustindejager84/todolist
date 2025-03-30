@@ -11,7 +11,23 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 function App() {
   // State for theme mode
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(() => {
+    const storedMode = localStorage.getItem("darkMode");
+    if (storedMode === null || storedMode === undefined) return false
+    try {
+      return JSON.parse(storedMode);
+    } catch (error) {
+      console.error("Failed to parse darkMode:", error);
+      return false;
+    }
+  }
+  );
+
+  useEffect(() => {
+    localStorage.setItem("darkMode", JSON.stringify(darkMode));
+  }, [darkMode])
+
+
   const [todos, setTodos] = useState(() => {
     const storedTodos = localStorage.getItem("ITEMS");
 
