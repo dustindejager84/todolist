@@ -9,7 +9,6 @@ export function Form({onSubmit, addTodo}) {
     e.preventDefault();
     
     if(newItem === "") return
-      //onSubmit(newItem);
     addTodo(newItem);
     setNewItem("");
   }

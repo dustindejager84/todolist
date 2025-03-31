@@ -2,9 +2,7 @@ import { useState } from 'react'
 import { Button, ButtonGroup, Input, List, ListItem, ListItemButton, ListItemText, Checkbox } from '@mui/material';
 
 export function Todoitem({completed, title, id, toggleTodo, deleteTodo}) {
-    //const [todos, setTodos] = useState([]); 
-    const [secondary, setSecondary] = useState(false);
-    // const [dense, setDense] = useState(false);
+   
   return (
     <ListItem id={id}>
       <div htmlFor="listItem">
@@ -19,9 +17,6 @@ export function Todoitem({completed, title, id, toggleTodo, deleteTodo}) {
           </Button>
       </div>
 
-      
-
-      
     </ListItem>
   )
 }

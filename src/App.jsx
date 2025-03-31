@@ -148,34 +148,7 @@ function App() {
         <h2>To Do List:</h2>
         
         <Formlist todos={todos} toggleTodo={toggleTodo} deleteTodo={deleteTodo} setDense={setDense} />
-        {/* <List dense={dense} sx={{ width: '100%', bgcolor: 'background.paper' }}>
-          <ListItem secondaryAction={
-              <Checkbox checked={secondary} />
-            }>
-            <label htmlFor="">
-              
-              
-              <ListItemText id="1" primary={`Item sdf asdfa sfsdf 1`} />
-            </label>
-            <Button color="secondary" variant="contained" className="btn-danger">Delete</Button>
-          </ListItem>
-        </List> 
-        
-        <List>
-          <List ItemsecondaryAction={
-              <Checkbox
-                edge="end"
-                onChange={handleToggle(value)}
-                checked={checked.includes(value)}
-                inputProps={{ 'aria-labelledby': labelId }}
-              />
-            }>
-            <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
-          </ListItem>
-        </List> */}
-
-
-
+       
       </>
     </ThemeProvider>
   )
