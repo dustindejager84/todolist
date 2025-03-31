@@ -26,6 +26,7 @@ body {
   place-items: center; */
   min-width: 320px;
   min-height: 100vh;
+  font-size: 14px!important;
 }
 
 h1 {
@@ -71,7 +72,12 @@ form > div {
 
 li {
   display: block!important;
-  clear: both;
+  clear: both; 
+  border-bottom: 1px solid #eaeaea!important;
+  padding-bottom:10px!important;
+  padding-left: 0!important;
+  padding-top: 0!important;
+  padding-top: 6px!important;
 }
 
 ul li button {
@@ -80,4 +86,11 @@ ul li button {
 
 .clear {
   clear: both;
+}
+
+.item {
+  display: block;
+  padding: 0 0.4em!important;
+  float: right;
+  width: calc(100% - 20px);
 }
